@@ -1,0 +1,14 @@
+{
+  "id": "out-1741874400000-1234",
+  "inputSignalId": "sig-999",
+  "processedBy": "SignalRegistryService",
+  "status": "registered",
+  "result": "Signal successfully registered in the system",
+  "priorityLevel": 5,
+  "metadata": [
+    "registeredType:urgent_alert",
+    "category:critical",
+    "source:sensor"
+  ],
+  "processedAt": "2026-03-13T12:00:01.000Z"
+}

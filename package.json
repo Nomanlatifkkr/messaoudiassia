@@ -1,19 +1,20 @@
 {
   "name": "signal-intelligence-backend",
-  "version": "1.0.0",
-  "description": "Modular signal processing backend",
-  "main": "dist/index.ts",
+  "version": "1.0.1",
+  "description": "Modular signal processing backend - Milestone 1",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "dev": "ts-node src/index.ts"
+    "dev": "ts-node milestone-1-signal-family/src/index.ts",
+    "example": "ts-node milestone-1-signal-family/src/examples/run-example.ts"
   },
-  "keywords": ["signal", "processing", "modular", "backend"],
+  "keywords": ["signal", "processing", "modular", "backend", "openstudygo"],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.0.0",
-    "typescript": "^5.0.0",
-    "ts-node": "^10.9.0"
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
   }
 }

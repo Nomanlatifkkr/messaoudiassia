@@ -1,0 +1,11 @@
+{
+  "id": "sig-999",
+  "signalType": "urgent_alert",
+  "signalCategory": "critical",
+  "signalSource": "sensor",
+  "signalValue": "high_temperature",
+  "priorityLevel": 5,
+  "timestamp": "2026-03-13T12:00:00.000Z",
+  "version": 2,
+  "isActive": true
+}

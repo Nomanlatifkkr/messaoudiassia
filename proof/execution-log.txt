@@ -1,0 +1,174 @@
+> signal-intelligence-backend@1.0.0 start
+> node dist/index.js
+
+=== Processing Signal through all 10 modules ===
+
+Input Signal: {
+  "id": "sig-999",
+  "signalType": "urgent_alert",
+  "signalCategory": "critical",
+  "signalSource": "sensor",
+  "signalValue": "high_temperature",
+  "priorityLevel": 5,
+  "timestamp": "2026-03-13T16:11:47.049Z",
+  "version": 2,
+  "isActive": true
+}
+
+--- SignalRegistryService ---
+{
+  "id": "out-1773418307061-6816",
+  "inputSignalId": "sig-999",
+  "processedBy": "SignalRegistryService",
+  "status": "registered",
+  "result": "Signal successfully registered in the system",
+  "priorityLevel": 5,
+  "metadata": [
+    "registeredType:urgent_alert",
+    "category:critical",
+    "source:sensor"
+  ],
+  "processedAt": "2026-03-13T16:11:47.061Z"
+}
+
+--- SignalClassificationService ---
+{
+  "id": "out-1773418307063-8201",
+  "inputSignalId": "sig-999",
+  "processedBy": "SignalClassificationService",
+  "status": "classified",
+  "result": "Signal classified as high_importance",
+  "priorityLevel": 5,
+  "metadata": [
+    "classification:high_importance",
+    "type:urgent_alert",
+    "value:high_temperature"
+  ],
+  "processedAt": "2026-03-13T16:11:47.063Z"
+}
+
+--- SignalPriorityEngineService ---
+{
+  "id": "out-1773418307064-8985",
+  "inputSignalId": "sig-999",
+  "processedBy": "SignalPriorityEngineService",
+  "status": "priority_adjusted",
+  "result": "Priority changed from 5 to 9",
+  "priorityLevel": 9,
+  "metadata": [
+    "originalPriority:5",
+    "adjustedPriority:9",
+    "reason:category=critical, source=sensor"
+  ],
+  "processedAt": "2026-03-13T16:11:47.064Z"
+}
+
+--- SignalWeightingService ---
+{
+  "id": "out-1773418307066-6422",
+  "inputSignalId": "sig-999",
+  "processedBy": "SignalWeightingService",
+  "status": "weight_assigned",
+  "result": "Signal weight = 1.20",
+  "priorityLevel": 5,
+  "metadata": [
+    "weight:1.20",
+    "value:high_temperature",
+    "version:2"
+  ],
+  "processedAt": "2026-03-13T16:11:47.066Z"
+}
+
+--- SignalRoutingService ---
+{
+  "id": "out-1773418307068-426",
+  "inputSignalId": "sig-999",
+  "processedBy": "SignalRoutingService",
+  "status": "routed",
+  "result": "Signal routed to emergency_processing",
+  "priorityLevel": 5,
+  "metadata": [
+    "route:emergency_processing",
+    "category:critical",
+    "source:sensor"
+  ],
+  "processedAt": "2026-03-13T16:11:47.068Z"
+}
+
+--- SignalConflictResolverService ---
+{
+  "id": "out-1773418307069-8830",
+  "inputSignalId": "sig-999",
+  "processedBy": "SignalConflictResolverService",
+  "status": "no_conflict",
+  "result": "No conflict detected",
+  "priorityLevel": 5,
+  "metadata": [
+    "conflict:false",
+    "isActive:true",
+    "version:2"
+  ],
+  "processedAt": "2026-03-13T16:11:47.069Z"
+}
+
+--- SignalExpirationService ---
+{
+  "id": "out-1773418307071-6265",
+  "inputSignalId": "sig-999",
+  "processedBy": "SignalExpirationService",
+  "status": "active",
+  "result": "Signal is still valid",
+  "priorityLevel": 5,
+  "metadata": [
+    "expired:false",
+    "timestamp:2026-03-13T16:11:47.049Z",
+    "ageMs:22"
+  ],
+  "processedAt": "2026-03-13T16:11:47.071Z"
+}
+
+--- SignalSilenceFilterService ---
+{
+  "id": "out-1773418307072-4400",
+  "inputSignalId": "sig-999",
+  "processedBy": "SignalSilenceFilterService",
+  "status": "passed",
+  "result": "Signal passed silence filter",
+  "priorityLevel": 5,
+  "metadata": [
+    "silent:false",
+    "value:\"high_temperature\""
+  ],
+  "processedAt": "2026-03-13T16:11:47.072Z"
+}
+
+--- SignalEscalationService ---
+{
+  "id": "out-1773418307076-5671",
+  "inputSignalId": "sig-999",
+  "processedBy": "SignalEscalationService",
+  "status": "escalated",
+  "result": "Priority escalated from 5 to 7",
+  "priorityLevel": 7,
+  "metadata": [
+    "escalated:true",
+    "originalPriority:5",
+    "newPriority:7",
+    "source:sensor",
+    "category:critical"
+  ],
+  "processedAt": "2026-03-13T16:11:47.076Z"
+}
+
+--- SignalIntegrityCheckerService ---
+{
+  "id": "out-1773418307078-8329",
+  "inputSignalId": "sig-999",
+  "processedBy": "SignalIntegrityCheckerService",
+  "status": "integrity_ok",
+  "result": "Signal integrity check passed",
+  "priorityLevel": 5,
+  "metadata": [],
+  "processedAt": "2026-03-13T16:11:47.078Z"
+}
+All modules executed successfully.
