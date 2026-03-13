@@ -1,0 +1,19 @@
+{
+  "name": "signal-intelligence-backend",
+  "version": "1.0.0",
+  "description": "Modular signal processing backend",
+  "main": "dist/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "keywords": ["signal", "processing", "modular", "backend"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  }
+}
